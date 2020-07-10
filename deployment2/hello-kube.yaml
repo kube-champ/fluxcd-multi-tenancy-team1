@@ -1,0 +1,27 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: hello-kube-helm
+spec:
+  releaseName: hello-kube-helm
+  chart:
+    repository: https://kube-champ.github.io/helm-charts
+    name: stateless-app
+    version: "0.1.1"
+  values:
+    app:
+      env:
+        - name: "MESSAGE"
+          value: "Hello from the internet"
+
+    # istioVirtualService: true
+
+    # istio-virtual-service:
+    #   host: istio.kubechamp.gq
+    #   gateway: istio-system/istio-system-public-gateway
+
+    #   endpoints:
+    #     - uri: /hello-kube
+    #       destinationPort: 80
+    #       destinationHost: hello-kube-helm

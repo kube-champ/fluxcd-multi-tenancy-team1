@@ -1,6 +1,6 @@
-namespace: team2
+namespace: team3
 
 resources:
-  - secret-msg.yaml
-  - deployment.yaml
-  - service.yaml
+  # - secret-msg.yaml
+  - hello-kube.yaml
+  - ingress.yaml
