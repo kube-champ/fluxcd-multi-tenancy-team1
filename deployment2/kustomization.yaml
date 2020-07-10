@@ -1,0 +1,6 @@
+namespace: team1
+
+resources:
+  - secret-msg.yaml
+  - deployment.yaml
+  - service.yaml
