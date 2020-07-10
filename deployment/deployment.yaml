@@ -17,3 +17,8 @@ spec:
         image: paulbouwer/hello-kubernetes:1.8
         ports:
         - containerPort: 8080
+        env:
+          - name: MESSAGE
+            value: "I just deployed this on Kubernetes"
+  
+  
