@@ -1,5 +1,6 @@
 namespace: team1
 
 resources:
-  - deployment.yaml
-  - service.yaml
+  # - secret-msg.yaml
+  - hello-kube.yaml
+  - ingress.yaml

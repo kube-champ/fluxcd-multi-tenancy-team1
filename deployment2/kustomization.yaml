@@ -1,6 +1,0 @@
-namespace: team3
-
-resources:
-  # - secret-msg.yaml
-  - hello-kube.yaml
-  - ingress.yaml

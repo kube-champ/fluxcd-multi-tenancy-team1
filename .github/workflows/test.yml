@@ -9,9 +9,11 @@ jobs:
         uses: stefanprodan/kube-tools@v1
         with:
           command: |
+            cd deployment
             kustomize build . | kubeval --strict --ignore-missing-schemas
       - name: conftest
         uses: stefanprodan/kube-tools@v1
         with:
           command: |
+            cd deployment
             kustomize build . | conftest test -p .github/policy -
