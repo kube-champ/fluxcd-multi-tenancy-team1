@@ -21,5 +21,16 @@ spec:
       env:
         - name: "MESSAGE"
           value: "Hello from the internet on Flux2"
+    istioVirtualService:
+      enabled: true
+
+    istio-virtual-service:
+      host: hello.team1.workload-1.kubechamp.gq
+      gateway: istio-system/istio-gateway-default-public
+      endpoints:
+        - uri: "/"
+          destinationPort: 80
+          uriType: prefix
+          destinationHost: hello-flux2
 
     
